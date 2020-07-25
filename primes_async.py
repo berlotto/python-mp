@@ -21,10 +21,8 @@ async def calc_primes(inputs=[]):
 	for number in inputs:
 		results.append(await asyncio.ensure_future(is_prime(number)))
 
-	# result = [await is_prime(n) for n in inputs]
 	n_primes = await count_primes(inputs=results)
-	# write_output(n_primes)
-	# await asyncio.gather(*tasks)
+	write_output(n_primes)
 
 
 numbers = range(2, 100_000)
